@@ -1,0 +1,102 @@
+.register_grid {
+  display: grid;
+  grid-template-rows: max-content minmax(70vh, max-content) minmax(
+      30vh,
+      max-content
+    );
+}
+
+.register_main {
+  display: grid;
+  grid-template-rows: repeat(2, max-content) auto;
+  /* background-color: var(--secondary-color-white); */
+}
+
+.register_bg_container {
+  position: relative;
+  /* z-index: -1; */
+}
+
+.register_secondary_heading {
+  justify-self: center;
+  padding: var(--padding-200);
+  text-transform: capitalize;
+  border-bottom: 5px solid var(--primary-color-green-600);
+  width: 40%;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.register_form__container {
+  display: flex;
+  background-color: var(--primary-color-green-100);
+  margin: var(--margin-200) auto;
+  width: 50%;
+  padding: var(--padding-100);
+  align-self: center;
+  border: 2px solid var(--primary-color-green-600);
+}
+
+.register_form__content {
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  flex: 1 1 50%;
+  margin: var(--margin-100);
+  padding: var(--padding-100);
+}
+
+.register_form__content form {
+  margin-bottom: var(--margin-200);
+}
+
+.register_form__content h4 {
+  margin: var(--margin-100) 0;
+  color: var(--primary-color-green);
+  font-weight: 700;
+}
+
+.register_form__content input {
+  margin: calc(var(--margin-100) / 2) 0;
+  border: 2px solid var(--primary-color-green-600);
+  width: 45%;
+}
+
+.register_form__content input:last-of-type {
+  margin-bottom: var(--margin-200);
+}
+
+input[name='register-email'],
+input[name='register-access-token'] {
+  width: 100%;
+}
+
+input[name='register-password'],
+input[name='register-client-id'] {
+  margin-right: var(--margin-100);
+}
+
+input[name='register-password'],
+input[name='register-password-confirm'] {
+  width: calc(50% - (var(--margin-100) / 2));
+}
+input[name='register-client-secret'] {
+  width: calc(70% - var(--margin-100));
+}
+
+input[name='register-client-id'] {
+  width: 30%;
+}
+
+.register_form__img {
+  width: 300px;
+  padding: var(--padding-100);
+  align-self: center;
+  border: 2px solid var(--primary-color-green-600);
+}
+
+.form_change {
+  cursor: pointer;
+  color: var(--primary-color-green);
+}

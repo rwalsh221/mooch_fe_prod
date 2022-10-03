@@ -1,0 +1,24 @@
+.button_green {
+  background-color: var(--primary-color-green);
+  min-width: 8rem;
+  padding: var(--padding-100);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid var(--primary-color-green);
+  transition: all 0.2s;
+  color: var(--secondary-color-white);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.button_green:hover {
+  background-color: inherit;
+  color: var(--primary-color-green);
+
+  /* border: 2px solid var(--primary-color-green); */
+}
+
+.button_green:disabled {
+  background-color: red;
+}

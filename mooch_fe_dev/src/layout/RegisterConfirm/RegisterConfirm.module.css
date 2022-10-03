@@ -1,0 +1,49 @@
+.register_confirm {
+  min-height: 60vh;
+  /* CHILD WONT INHERIT HIGHT FROM MIN_HEIGHT SET HIEGHT 1PX WORK AROUND */
+  height: 1px;
+}
+
+.register_confirm_container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.strava {
+  font-family: 'Candal', sans-serif;
+  color: #ff4500;
+  font-size: 2rem;
+}
+
+.confirm_card_container {
+  width: 100%;
+  padding: var(--padding-400);
+}
+
+.confirm_card_container * {
+  margin-bottom: var(--margin-100);
+  /* background-color: aqua; */
+}
+
+.confirm_card_container p:first-of-type {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.confirm_card_container p:first-child span:first-of-type {
+  font-size: 2rem;
+}
+
+.confirm_card_container p:last-of-type {
+  text-align: center;
+  color: var(--primary-color-green);
+  font-weight: 700;
+}
+
+.confirm_card_container button {
+  display: block;
+  margin: var(--margin-400) auto 0 auto;
+}
