@@ -8,7 +8,7 @@ import ButtonGreen from '../../../components/Button/ButtonGreen/ButtonGreen';
 const SignIn = ({ formContentHandlerProps }) => {
   const emailRef = useRef();
   const passwordRef = useRef();
-  const { signIn } = useAuth();
+  const { signIn, currentUser } = useAuth();
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -27,12 +27,13 @@ const SignIn = ({ formContentHandlerProps }) => {
       console.error(error.message);
     }
   };
-
+  console.log(currentUser);
   return (
     <>
       <h3 className={classes.register_card__heading}>
         Login to Your MoOch Accout
       </h3>
+      {/* {currentUser.uid} */}
       <p>{error}</p>
       <form data-margin-bottom={'300'} onSubmit={handleSubmit}>
         <input

@@ -8,8 +8,10 @@ const useAuth = () => {
 };
 
 const AuthProvider = ({ children }) => {
-  const [currentUser, setCurrentUser] = useState();
+  const [currentUser, setCurrentUser] = useState({ uid: null, email: null });
   const [loading, setLoading] = useState(true);
+  console.log(loading);
+  console.log(currentUser);
 
   const signUp = (email, password) => {
     return auth.createUserWithEmailAndPassword(email, password);
@@ -29,6 +31,7 @@ const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
+      console.log(user);
       setCurrentUser(user);
       setLoading(false);
     });
